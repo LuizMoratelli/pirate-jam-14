@@ -24,16 +24,25 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
     {
         _rigidBody.velocity = _movementDirection * speed * Time.fixedDeltaTime * 60;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var enemy = collision.GetComponent<Enemy>();
+
+        if (enemy == null) return;
+
+        enemy.TakeDamage(1);
     }
 }
