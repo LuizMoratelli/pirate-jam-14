@@ -16,6 +16,12 @@ public class EnemyData : ScriptableObject
         var leftEnemy = dict_enemies.GetValueOrDefault(left, null);
         var right = data.position + new Vector2(1, 0);
         var rightEnemy = dict_enemies.GetValueOrDefault(right, null);
+
+        var top = data.position - new Vector2(0, 1);
+        var topEnemy = dict_enemies.GetValueOrDefault(top, null);
+        var bottom = data.position + new Vector2(0, 1);
+        var bottomEnemy = dict_enemies.GetValueOrDefault(bottom, null);
+
         List<Vector2> availablePositions = new List<Vector2>();
 
         if (leftEnemy == null)
@@ -26,6 +32,16 @@ public class EnemyData : ScriptableObject
         if (rightEnemy == null)
         {
             availablePositions.Add(right);
+        }
+
+        if (topEnemy == null)
+        {
+            availablePositions.Add(top);
+        }
+
+        if (bottomEnemy == null)
+        {
+            availablePositions.Add(bottom);
         }
 
         // Workaround
