@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour
     public void Spread(Vector2 position, Enemy enemy)
     {
         // TODO: validar se está no limite do mapa (exemplo, min position = -20, max position =20)
+
+        if (position.x < -20 || position.x > 20 || position.y < -20 || position.y > 20) return;
 
         GameObject newObject = Instantiate(enemy_prefab, new Vector3(position.x, position.y, 0), Quaternion.identity);
         var newEnemy = newObject.GetComponent<Enemy>();

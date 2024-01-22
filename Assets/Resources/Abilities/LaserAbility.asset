@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93f488d1a66caa4d9cf8c9eeea93184, type: 3}
+  m_Name: LaserAbility
+  m_EditorClassIdentifier: 
+  id: laser_ability
+  damage: 1
+  speed: 0
+  projectile: {fileID: 2363964938964379234, guid: 871219892ec456e42bbf56ed48eb07e3, type: 3}
+  timeToDestroy: 10
+  delayBetweenProjectiles: 0.02
